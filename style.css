@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: Poppins;
+  background-color: #ffebf2;
+  color: #252424;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 320px) {
+  /* Base styles (mobile) */
+
+  .navbar {
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    height: 7vh;
+    align-items: center;
+  }
+
+
+
+  .logo a {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: DynaPuff;
+    margin-left: 15px;
+  }
+
+  #menuBtn {
+    border: none;
+
+    background: transparent;
+    font-weight: bold;
+    font-size: 22px;
+    padding: none;
+    margin-right: 15px;
+  }
+.nav-links {
+  transform: translateX(-90%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+
+
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100vh;
+  padding: 25px;
+  background-color: white;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 9999; 
+}
+
+
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+
+.nav-links.showing {
+  display: flex;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+
+.nav-links.active {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+
+.container{
+    
+    width: 100%;
+    height: 58vh;
+
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.container img{
+  width: 150px;
+  height: 150px;
+  margin: 0px auto;
+  border-radius: 50%;
+  margin-top: 25px;
+}
+
+.herotext{
+  margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    
+}
+
+.container p {
+    
+    text-align: center;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.container button {
+    width: 150px;
+    height: 45px;
+    background-color: #252424;
+    color: #ffebf2;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+  margin: 0px auto;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.container button:hover{
+    background-color: #161616;
+}
+
+
+
+#closebtn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 70px;
+}
+
+#closebtn div {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate to form an "X" */
+.line1 {
+  transform: rotate(45deg);
+}
+
+.line2 {
+  transform: rotate(-45deg);
+}
+
+
+.nav-links a {
+font-size: 20px;
+font-weight: bold;
+}
+
+.purpose{
+
+  width: 85%;
+  margin: 0px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.purpose h1{
+  font-size: 25px;
+
+  
+}
+
+.purpose p {
+  font-size: 18px;
+  
+
+}
+
+.purpose .tips{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border-radius: 25px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 
+            0 6px 20px rgba(0, 0, 0, 0.08);
+margin-top: 25px;
+align-self: center;
+gap: 20px;
+            
+
+}
+
+.purpose .tips h1{
+  font-size: 18px;
+}
+
+.purpose .tips p {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #ffebf2;
+  font-size: 17px;
+
+}
+
+.purpose .tips button {
+  width: 80%;
+  align-self: center;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  background-color: #252424;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+
+}
+
+.purpose .tips .previews {
+  display: flex;
+  gap: 15px;
+  align-self: flex-end;
+}
+
+.introRes{
+  width: 85%;
+  background-color: white;
+border-radius: 30px;
+  margin: 25px auto;
+  padding: 20px;
+  user-select: none;
+}
+
+.introRes h1 {
+  font-size: 25px;
+}
+
+.introRes p {
+    font-size: 18px;
+}
+
+
+
+.resourceshow{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.book {
+  width: 300px;
+  height: 400px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.booktop {
+  width: 300px;
+  background-color: #242424;
+  height: 35%;
+    border-radius: 25px 25px 0px 0px;
+display: flex;
+justify-content: center;
+}
+
+.booktop img {
+  width: 170px;
+  
+}
+
+.bookbottom{
+  max-width: 300px;
+  padding: 20px;
+  height: 65%;
+  background-color: #ffebf2;
+  border-radius: 0px 0px 25px 25px;
+}
+.bookbottom p {
+  text-align: left;
+  margin: 0px;
+}
+
+.info, .info2 {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #2424248c;
+}
+
+.info2 {
+  margin-top: 10px;
+  width: 45%;
+}
+
+.info::before,
+.info2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: sheen 1.5s infinite;
+}
+
+@keyframes sheen {
+  100% {
+    left: 100%;
+  }
+}
+
+
+.bookbottom button {
+  width: 70%;
+margin-top: 20%;
+margin-left: 15%;
+color: #ffebf2;
+font-size: 18px;
+border: none;
+border-radius: 100px;
+  height: 45px;
+  background-color: #242424;
+
+}
+
+.resourceshow{
+  margin-top: 25px;
+}
+
+.elena-video-section {
+  background-color: #ffffff;
+  color: #242424;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-family: system-ui, sans-serif;
+}
+
+.elena-title {
+  color: #242424;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.elena-description {
+  color: #242424;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.elena-cta-button {
+  background-color: #242424;
+  color: #ffffff;
+font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(230, 186, 201, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-size: 15px;
+}
+
+.elena-cta-button:hover {
+  transform: scale(1.05);
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
