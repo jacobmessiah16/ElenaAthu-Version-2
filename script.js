@@ -16,3 +16,20 @@ closebtn.addEventListener('click', () => {
   document.body.classList.remove('no-scroll');
 })
 
+
+// FAQ Section  to toggle the Answers Open
+const faqitems = document.querySelector('.faqitems')
+const question = faqitems.querySelectorAll('.question')
+
+question.forEach( (question) => {
+ 
+  question.addEventListener('click',  () => {
+const arrow = question.querySelector('svg')
+arrow.classList.toggle('spin')
+
+     const answer = question.nextElementSibling;
+  answer.classList.toggle('faqactive')
+  })
+})
+
+
