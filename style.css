@@ -17,7 +17,9 @@ a {
 }
 
 @media (min-width: 320px) {
-  /* Base styles (mobile) */
+ /* Styles for Small phones*/
+
+  
 
   .navbar {
     user-select: none;
@@ -451,10 +453,15 @@ margin-top: 3px;
 
 }
 
-.faqitems .question svg {
+.faqitems .question p {
+
+}
+
+.faqitems .question > svg {
     transition: transform 0.5s ease, padding 0.3s ease, opacity 0.3s ease;
       width: 24px;       /* Make it bigger */
   height: 24px;
+  margin-left: 10px;
 
 }
 
@@ -480,12 +487,70 @@ margin-top: 3px;
 
 
 
+/*Footer Part*/
+
+footer{
+  padding-top: 50px;
+  width: 100%;
+  height: 45vh;
+  background: url(./icons/waves.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+footer .logo{
+  color: #ffebf2;
+  margin-left: 10px;
+  margin-top: 5px;
+font-family: DynaPuff;
+}
+
+.footerlinks{
+  display: flex;
+
+}
+
+/*Terms and conditions Text*/
+footer p  {
+  margin-top: 25px;
+  justify-self: center;
+}
 
 
+footer small{
+  margin-left: 65px;
+}
+
+footer ul{
+  margin-left: 10px;
+  margin-top: 10px;
+display: flex;
+flex-direction: column;
+gap: 5px;
+justify-content: center;
+}
+
+footer ul li a {
+  font-size: 17px;
+
+}
+
+.sociallinks{
+  font-size: 30px;
+  margin-left: 120px;
+}
 
 
 }
 
+
+@media (min-width: 320px) and (max-width: 375px) {
+ /* Mobile Screen Size for Normal Size*/
+
+ 
+
+}
 
 
 

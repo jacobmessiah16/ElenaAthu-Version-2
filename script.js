@@ -4,6 +4,7 @@ const navLinks = document.getElementById('navLinks');
 const closebtn = document.getElementById('closebtn')
 
 menuBtn.addEventListener('click', () => {
+  
   navLinks.classList.toggle('showing');
   navLinks.classList.toggle('active');
   document.body.classList.add('no-scroll');
@@ -18,17 +19,19 @@ closebtn.addEventListener('click', () => {
 
 
 // FAQ Section  to toggle the Answers Open
+
 const faqitems = document.querySelector('.faqitems')
+
 const question = faqitems.querySelectorAll('.question')
 
 question.forEach( (question) => {
- 
-  question.addEventListener('click',  () => {
-const arrow = question.querySelector('svg')
-arrow.classList.toggle('spin')
+  question.addEventListener('click', () => {
 
-     const answer = question.nextElementSibling;
-  answer.classList.toggle('faqactive')
+    const svg = question.querySelector('svg');
+    svg.classList.toggle('spin')
+
+const answer = question.nextElementSibling;
+answer.classList.toggle('faqactive')
   })
 })
 
